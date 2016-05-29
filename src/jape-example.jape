@@ -1,0 +1,12 @@
+Phase:	FootballCategoryPhase
+Input:  Lookup
+Options: control = brill
+
+Rule: FootballTeams
+Priority: 100
+(
+  {Lookup.majorType == teams}
+)
+:reference
+-->
+:reference.FootballTeam = { rule= "FootballTeams" }

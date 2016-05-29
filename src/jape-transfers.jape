@@ -1,0 +1,12 @@
+Phase:   TransfersPhase
+Input:  Lookup
+Options: control = brill
+
+Rule: AllTransfers
+Priority: 100
+(
+  {Lookup.majorType == transfer}
+)
+:reference
+-->
+:reference.AboutTransfer = { rule= "AboutTransfer" }
